@@ -486,7 +486,7 @@ class CFastLED(object):
             if CHIPSET == OCTOWS2811_400:
                 c = COctoWS2811Controller(RGB_ORDER, WS2811_400kHz)
                 return addLeds(cr, data, nLedsOrOffset, nLedsIfOffset)
-        if WS2813_800kHz
+        if WS2813_800kHz:
             if CHIPSET == OCTOWS2813:
                 c = COctoWS2811Controller(RGB_ORDER, WS2813_800kHz)
                 return addLeds(c, data, nLedsOrOffset, nLedsIfOffset)
@@ -571,7 +571,7 @@ class CFastLED(object):
                         nLedsIfOffset
                     )
 
-            if PORTB_FIRST_PIN
+            if PORTB_FIRST_PIN:
                 if CHIPSET == WS2811_PORTB:
                     return addLeds(
                         InlineBlockClocklessController(NUM_LANES, PORTB_FIRST_PIN, NS(320), NS(320), NS(640),
